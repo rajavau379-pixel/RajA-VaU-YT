@@ -17,6 +17,32 @@ def get_width():
     except:
         return 45
 
+# Professional loading spinner animation
+def animate_loading(message, seconds=2):
+    chars = ["⠋", "⠙", "⠹", "⠸", "⠼", "⠴", "⠦", "⠧", "⠇", "⠏"]
+    end_time = time.time() + seconds
+    i = 0
+    width = max(get_width(), 40)
+    padding = " " * max(0, (width - 45) // 2)
+    while time.time() < end_time:
+        sys.stdout.write(f"\r{padding}\033[1;36m{chars[i % len(chars)]} \033[1;33m{message}...\033[0m")
+        sys.stdout.flush()
+        time.sleep(0.1)
+        i += 1
+    sys.stdout.write(f"\r\033[K")
+
+# Professional progress bar animation
+def progress_bar(message):
+    width = max(get_width(), 40)
+    padding = " " * max(0, (width - 45) // 2)
+    print(f"\n{padding}\033[1;35m{message}\033[0m")
+    for i in range(0, 101, 5):
+        bar = '█' * (i // 5) + '-' * (20 - (i // 5))
+        sys.stdout.write(f"\r{padding}\033[1;32m[{bar}] {i}%\033[0m")
+        sys.stdout.flush()
+        time.sleep(0.03)
+    print()
+
 def creationyear(uid):
     if len(uid) == 15:
         if uid.startswith(('100000000', '10000000', '1000000', '1000001', '1000002', '1000003', '1000004', '1000005')):
@@ -111,15 +137,29 @@ def approval_system():
         
         choice = input(f"{padding}\033[1;33m [-] CHOOSE ---> \033[0m")
         if choice == '1':
+            animate_loading("Opening WhatsApp Group", 2)
             os.system("xdg-open https://chat.whatsapp.com/K9E5ULcGZ7G0O15wwvodfy?s=sh&p=a&mlu=4&ilr=4 2>/dev/null")
-            print(f"{padding}\033[1;32m [+] Opening WhatsApp Group...\033[0m")
-            time.sleep(2)
+            print(f"{padding}\033[1;32m [+] WhatsApp Group Opened Successfully!\033[0m")
+            time.sleep(1.5)
         elif choice == '2':
-            print(f"\n{padding}\033[1;32m welcome to Raja Vau Teach World\033[0m")
-            print(f"{padding}\033[1;33m your Key approved\033[0m")
-            time.sleep(2.5)
-            break
+            animate_loading("Connecting to Server & Checking Key", 2.5)
+            try:
+                res = requests.get("https://raw.githubusercontent.com/rajavau379-pixel/RajA-VaU-YT/refs/heads/main/key.txt", timeout=10)
+                # Check if the generated user key exists in GitHub key.txt file for approval
+                if user_key in res.text:
+                    progress_bar("Verifying Approval Key")
+                    print(f"\n{padding}\033[1;32m [✓] Key Approved Successfully!\033[0m")
+                    print(f"{padding}\033[1;32m welcome to Raja Vau Teach World\033[0m")
+                    time.sleep(2.5)
+                    break
+                else:
+                    print(f"\n{padding}\033[1;31m [!] Key not approved yet! Please send your key to WhatsApp.\033[0m")
+                    time.sleep(2.5)
+            except Exception:
+                print(f"\n{padding}\033[1;31m [!] Connection Error! Check your internet connection.\033[0m")
+                time.sleep(2.5)
         elif choice == '0':
+            animate_loading("Exiting Tool", 1)
             exit()
         else:
             print(f"{padding}\033[1;31m [!] Invalid Choice!\033[0m")
@@ -251,6 +291,7 @@ def old_One():
     padding = " " * max(0, (width - 55) // 2)
     print(f"{padding}\033[1;32m[+] Old Code Series (2010-2014)\033[0m")
     ask = input(f"{padding}\033[1;33m[?] Select Option (1/2): \033[0m")
+    animate_loading("Preparing UID list", 1.5)
     limit = int(input(f"{padding}\033[1;33m[?] Enter Limit (e.g. 20000): \033[0m"))
     
     star = '10000'
@@ -265,6 +306,7 @@ def old_One():
     meth = input(f"{padding}\033[1;33m[-] CHOICE (1/2): \033[0m").strip()
     
     banner()
+    animate_loading("Initializing Engine", 1)
     print(f"{padding}\033[1;32m[+] Total IDs: {len(user)}\033[0m")
     print(f"{padding}\033[1;33m[+] Use Airplane Mode for Good Results\033[0m")
     print("-" * 45)
@@ -300,6 +342,7 @@ def old_Tow():
     meth = input(f"{padding}\033[1;33m[-] CHOICE (1/2): \033[0m").strip()
     
     banner()
+    animate_loading("Initializing Engine", 1)
     print(f"{padding}\033[1;32m[+] Total IDs: {len(user)}\033[0m")
     print(f"{padding}\033[1;33m[+] Use Airplane Mode for Good Results\033[0m")
     print("-" * 45)
@@ -334,6 +377,7 @@ def old_Tree():
     meth = input(f"{padding}\033[1;33m[-] CHOICE (1/2): \033[0m").strip()
     
     banner()
+    animate_loading("Initializing Engine", 1)
     print(f"{padding}\033[1;32m[+] Total IDs: {len(user)}\033[0m")
     print(f"{padding}\033[1;33m[+] Use Airplane Mode for Good Results\033[0m")
     print("-" * 45)
@@ -362,12 +406,16 @@ def main_menu():
         
         choice = input(f"{padding}\033[1;33m [-] CHOOSE ---> \033[0m")
         if choice == '1':
+            animate_loading("Loading All Series Module", 1.5)
             old_One()
         elif choice == '2':
+            animate_loading("Loading 100003/4 Module", 1.5)
             old_Tow()
         elif choice == '3':
+            animate_loading("Loading 2009 Series Module", 1.5)
             old_Tree()
         elif choice == '0':
+            animate_loading("Exiting Tool", 1)
             print(f"{padding}\n\033[1;31m [!] Exiting...\033[0m")
             break
         else:
